@@ -7,7 +7,7 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_product"
         android:icon="@drawable/ic_shop"
         android:title="@string/title_product" />
 
@@ -16,7 +16,7 @@
         android:title="" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_transaction"
         android:icon="@drawable/ic_cart"
         android:title="@string/title_transaction" />
 
