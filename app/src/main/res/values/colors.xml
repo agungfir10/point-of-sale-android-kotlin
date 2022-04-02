@@ -7,7 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#ED3C3C</color>
+    <color name="green">#17A84A</color>
+    <color name="yellow">#FFAB00</color>
+    <color name="ripple_color">#4CFFFFFF</color>
     <color name="placeholder">#E3E3E3</color>
+    <color name="divider">#EEE</color>
     <color name="primary_Text">#212121</color>
     <color name="secondary_text">#757575</color>
 </resources>
