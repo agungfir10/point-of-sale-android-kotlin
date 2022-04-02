@@ -5,15 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingHorizontal="16dp"
-    android:paddingVertical="10dp">
+    android:paddingTop="10dp">
 
     <ImageView
         android:id="@+id/iv_product"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:contentDescription="@string/title_product"
         android:src="@drawable/placeholder_product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_letter_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_product"
+        app:layout_constraintEnd_toEndOf="@+id/iv_product"
+        app:layout_constraintStart_toStartOf="@+id/iv_product"
+        app:layout_constraintTop_toTopOf="@+id/iv_product" />
 
     <TextView
         android:id="@+id/tv_name_product"
@@ -23,31 +39,75 @@
         android:text="Pencil Alis by Neural"
         android:textColor="@color/primary_Text"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@id/tv_price_product"
+        app:layout_constraintEnd_toStartOf="@+id/tv_price_product"
         app:layout_constraintStart_toEndOf="@id/iv_product"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Pencil" />
 
     <TextView
-        android:layout_width="0dp"
+        android:id="@+id/tv_stock_product"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="in stock"
-        android:textColor="@color/secondary_text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@id/tv_price_product"
-        app:layout_constraintStart_toEndOf="@id/iv_product"
-        app:layout_constraintTop_toBottomOf="@id/tv_name_product"
-        tools:text="in stock" />
+        android:layout_marginTop="4dp"
+        android:text="10 in stock"
+        app:layout_constraintStart_toEndOf="@+id/iv_product"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_product" />
 
     <TextView
         android:id="@+id/tv_price_product"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rp. 4,000"
-        android:textColor="@color/primary_Text"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/secondary_text"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name_product"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Rp. 4.000" />
+
+
+    <ImageView
+        android:id="@+id/increment_item"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_btn_circle_primary"
+        android:padding="4dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toTopOf="@+id/view_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_total_product_purchases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:text="2"
+        app:layout_constraintBottom_toBottomOf="@+id/increment_item"
+        app:layout_constraintEnd_toStartOf="@+id/increment_item"
+        app:layout_constraintTop_toTopOf="@+id/increment_item" />
+
+    <ImageView
+        android:id="@+id/decrement_item"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/bg_btn_circle_red"
+        android:padding="4dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_total_product_purchases"
+        app:layout_constraintEnd_toStartOf="@+id/tv_total_product_purchases"
+        app:layout_constraintTop_toTopOf="@+id/tv_total_product_purchases"
+        app:tint="@color/white" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_product" />
 </androidx.constraintlayout.widget.ConstraintLayout>
