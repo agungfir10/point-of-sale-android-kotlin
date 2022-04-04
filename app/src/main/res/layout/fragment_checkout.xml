@@ -14,27 +14,41 @@
         <me.dm7.barcodescanner.zxing.ZXingScannerView
             android:id="@+id/scanner"
             android:layout_width="0dp"
-            android:layout_height="180dp"
+            android:layout_height="0dp"
             app:cornerRadius="8dp"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:roundedCorner="true"
-            app:shouldScaleToFill="true" />
+            app:shouldScaleToFill="true"
+            app:zxing_framing_rect_height="160dp"
+            app:zxing_framing_rect_width="80dp"
+            app:zxing_preview_scaling_strategy="fitXY"
+            app:zxing_use_texture_view="false" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_product"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
+            android:background="@color/white"
             android:clipToPadding="false"
             android:paddingBottom="?attr/actionBarSize"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scanner"
+            app:layout_constraintTop_toBottomOf="@id/guideline"
             tools:itemCount="12"
             tools:listitem="@layout/item_product" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
