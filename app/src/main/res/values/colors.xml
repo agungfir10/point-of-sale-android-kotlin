@@ -12,7 +12,7 @@
     <color name="yellow">#FFAB00</color>
     <color name="ripple_color">#4CFFFFFF</color>
     <color name="placeholder">#E3E3E3</color>
-    <color name="divider">#EEE</color>
+    <color name="divider">#EFEFEF</color>
     <color name="primary_Text">#212121</color>
     <color name="secondary_text">#757575</color>
 </resources>

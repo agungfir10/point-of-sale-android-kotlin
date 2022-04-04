@@ -10,7 +10,10 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.agungfir.pointofsale.R
 import com.agungfir.pointofsale.databinding.ActivityMainBinding
+import com.agungfir.pointofsale.ui.checkout.CheckoutFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
@@ -46,6 +49,11 @@ class MainActivity : AppCompatActivity() {
             }
             NavigationUI.onNavDestinationSelected(item, navController)
             return@setOnItemSelectedListener true
+        }
+
+        binding.fabMain.setOnClickListener {
+            val checkoutFragment = CheckoutFragment()
+            checkoutFragment.show(supportFragmentManager, "TAG")
         }
     }
 }
